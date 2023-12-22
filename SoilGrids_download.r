@@ -1,3 +1,5 @@
+#install.packages("gdalUtilities")
+library(gdalUtilities)
 gdalwarp(t_srs="EPSG:4326", multi=TRUE, wm=200, 
          co=c("BIGTIFF=YES", "COMPRESS=DEFLATE", "TILED=TRUE"),
          tr=c(0.25,0.25), # Desired output resolution
